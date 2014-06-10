@@ -60,6 +60,8 @@ class SectionsController < ApplicationController
   # DELETE /sections/1.json
   def destroy
     @page.sections.destroy
+    @page.sections.image = nil
+    @page.sections.image
     respond_to do |format|
       format.html { redirect_to page_sections_url, notice: 'Section was successfully destroyed.' }
       format.json { head :no_content }
@@ -74,6 +76,6 @@ class SectionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def section_params
-      params.require(:section).permit(:title, :body, :page_id)
+      params.require(:section).permit(:title, :body, :page_id, :image)
     end
 end

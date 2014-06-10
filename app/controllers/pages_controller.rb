@@ -60,6 +60,8 @@ class PagesController < ApplicationController
   # DELETE /pages/1.json
   def destroy
     @page.destroy
+    @page.image = nil
+    @page.image   
     respond_to do |format|
       format.html { redirect_to pages_url, notice: 'Page was successfully destroyed.' }
       format.json { head :no_content }
@@ -74,6 +76,6 @@ class PagesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def page_params
-      params.require(:page).permit(:section)
+      params.require(:page).permit(:section, :image)
     end
 end
