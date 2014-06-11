@@ -1,129 +1,147 @@
-<%= form_for  ([@section, @page]), url: new_page_path do |f| %>
-  <a href="#" class="go-top" style="display: inline;">Back to top</a>
+  <%= form_for  ([@section, @page]), url: new_page_path do |f| %>
+<div class "row">
 
-<div class="nav center">
-  <a href="#section-1">Section1</a> |
-  <a href="#section-2">Section2</a> |
-  <a href="#section-3">Section3</a> |
-  <a href="#section-4">Section4</a>
-<%#SECTION 1%>
-<div id="section-1" class="text-center" contenteditable="true">
-  <h1>Insert header</h1>
-</div>
-  <h3 class="subheader-center" contenteditable="true">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare.</h3>
-<div class="row">
-  <div class="small-12 columns" style="line-height: 24px;">
-    <div class="small-6 columns">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare.
-    </div>
-    <div class="small-6 columns">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare.
-    </div>
-  </div>
-</div>
-  <ul class="large-block-grid-4">
-    <li>
-      <img class="column-alignment" src="http://placehold.it/350x150">
-      <%= f.file_field :image %>
-        <span class="column-alignment" contenteditable="true">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare.</span>
-    </li>
-    <li>
-      <img class="column-alignment" src="http://placehold.it/350x150">
-      <%= f.file_field :image %>
-        <span class="column-alignment" contenteditable="true">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare.</span>
-    </li>
-    <li>
-      <img class="column-alignment" src="http://placehold.it/350x150">
-      <%= f.file_field :image %>
-        <span class="column-alignment" contenteditable="true">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare.</span>
-    </li>
-    <li>
-      <img class="column-alignment" src="http://placehold.it/350x150">
-      <%= f.file_field :image %>
-        <span class="column-alignment" contenteditable="true">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare.</span>
-    </li>
-  </ul>
-</div>
-<hr width="100%"></hr>
-<%#SECTION 2%>
-<div id="section-2" class="text-center" contenteditable="true">
-  <h1>Insert header</h1>
-</div>
-  <h3 class="subheader-center" style="padding: 20px;" contenteditable="true">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare.</h3>
-  <br>
-<div class="row">
-  <div class="small-12 columns" style="line-height: 24px;">
-    <div class="small-4 columns">
-      <img height="400" width="500" src="http://placehold.it/350x150">
-      <%= f.file_field :image %>
-    </div>
-    <div class="small-7 columns">
-      <h3 class="subheader text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare.</h3>  
-      <p class="column-alignment left ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce arcu elit, dapibus eget lorem a, suscipit blandit tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac posuere nibh. Quisque ullamcorper sit amet urna eu ultricies. Praesent cursus libero a purus mollis adipiscing. Nunc volutpat, urna at faucibus tempor, tellus purus accumsan libero, non aliquam sapien quam porttitor dui. Quisque et purus quis diam egestas pretium. Duis vel elit bibendum, rhoncus lacus id, tempor leo. Suspendisse consectetur erat eget porta blandit. Praesent consequat lacus quam, ac molestie turpis convallis ac. In hac habitasse platea dictumst.
 
-</p>
+    <a href="#" class="go-top" style="display: inline;">Back to top</a>
+
+    <div class="nav center">
+      <a href="#section-1">Section1</a> |
+      <a href="#section-2">Section2</a> |
+      <a href="#section-3">Section3</a> |
+      <a href="#section-4">Section4</a>
     </div>
-  </div>
-</div>  
-<hr width="100%"></hr>
-<%#SECTION 3%>
-<div id="section-3" class="text-center" contenteditable="true">
-  <h1>Insert header</h1>
-</div>
-  
-<div class="row">
-  <div class="small-12 columns" style="line-height: 24px;">
-    <div class="small-6 columns" style="padding: 20px;">
-      <h4 class="subheader text-left" style="padding: 15px" contenteditable="true">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare.</h4>
-      <img  height="300" width="400" style="padding:15px; float: left" src="http://placehold.it/350x150">
-      <%= f.file_field :image %>
-      <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean risus tellus, aliquet ut odio vel, vehicula lacinia odio. Nullam suscipit augue quis est consectetur, et cursus sapien tempor. Aliquam egestas mi non arcu sagittis hendrerit. Mauris commodo, nunc quis congue ullamcorper, risus odio mattis lacus, ut aliquet libero elit ut dui. Mauris suscipit ipsum in ligula laoreet, sed gravida justo rutrum. Maecenas lobortis quam neque, et molestie dui consequat nec. Nulla sollicitudin, leo eu auctor lobortis, ligula velit dictum eros, a feugiat nulla lectus rutrum magna. </span>
-      
-      <hr stlye="float: right" width="100%"></hr>
-      <h4 class="subheader text-left"  contenteditable="true">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lobortis.</h4>
-      <img  height="300" width="400" style="padding: 15px; float: left" src="http://placehold.it/350x150"><%= f.file_field :image %>
-      <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tincidunt tempor orci, non molestie justo egestas venenatis. Duis nec ultrices nulla. In et tortor sodales, mattis elit sed, faucibus sapien. Sed pellentesque laoreet dui vel volutpat. Nam ut porta dui. Aenean cursus pellentesque nisi, in elementum ipsum varius sit amet. Curabitur vestibulum justo et pretium dictum. Proin varius vel nisl ut ultrices. Ut sed metus aliquet, facilisis enim id, vulputate ipsum. Sed ac ullamcorper felis. Sed non quam vel orci sollicitudin feugiat. </span>
+    <%#SECTION 1%>
+    <div class="row">
+      <div class="smal-12 columns">
+      <div class="text-center" id="section-1" contenteditable="true">
+        <h1>Insert header</h1>
+      </div>
+      <h3 class="subheader-center" contenteditable="true">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare.</h3>
+      <div class="small-12 columns" style="line-height: 24px;">
+        <div class="small-6 columns">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare.
+        </div>
+        <div class="small-6 columns">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare.
+        </div>
+      </div>
+      <ul class="large-block-grid-4">
+        <li>
+          <img class="column-alignment" src="http://placehold.it/350x150">
+          <%= f.file_field :image %>
+            <span class="column-alignment" contenteditable="true">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare.</span>
+        </li>
+        <li>
+          <img class="column-alignment" src="http://placehold.it/350x150">
+          <%= f.file_field :image %>
+            <span class="column-alignment" contenteditable="true">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare.</span>
+        </li>
+        <li>
+          <img class="column-alignment" src="http://placehold.it/350x150">
+          <%= f.file_field :image %>
+            <span class="column-alignment" contenteditable="true">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare.</span>
+        </li>
+        <li>
+          <img class="column-alignment" src="http://placehold.it/350x150">
+          <%= f.file_field :image %>
+            <span class="column-alignment" contenteditable="true">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare.</span>
+        </li>
+      </ul>
+      </div>
+    </div>
+      <hr width="100%"></hr>
+      <%#SECTION 2%>
+    <div class="row">
+      <div class="small-12 columns">
+      <div id="section-2" class="text-center" contenteditable="true">
+        <h1>Insert header</h1>
+      </div>
+        <h3 class="subheader-center" style="padding: 20px;" contenteditable="true">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare.</h3>
+        <br>
+      <div class="row">
+        <div class="small-12 columns" style="line-height: 24px;">
+          <div class="small-4 columns">
+            <img height="400" width="500" src="http://placehold.it/350x150">
+            <%= f.file_field :image %>
+          </div>
+          <div class="small-7 columns">
+            <h3 class="subheader text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare.</h3>  
+            <p class="column-alignment left ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce arcu elit, dapibus eget lorem a, suscipit blandit tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac posuere nibh. Quisque ullamcorper sit amet urna eu ultricies. Praesent cursus libero a purus mollis adipiscing. Nunc volutpat, urna at faucibus tempor, tellus purus accumsan libero, non aliquam sapien quam porttitor dui. Quisque et purus quis diam egestas pretium. Duis vel elit bibendum, rhoncus lacus id, tempor leo. Suspendisse consectetur erat eget porta blandit. Praesent consequat lacus quam, ac molestie turpis convallis ac. In hac habitasse platea dictumst.
+
+      </p>
+          </div>
+        </div>
+      </div>  
+      <hr width="100%"></hr>
+      </div>
     </div> 
-   <div class="small-6 columns" style="padding: 20px;">
-      <h4 class="subheader text-left" style="padding: 15px" contenteditable="true">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare.</h4>
-      <img  height="300" width="400" style="padding:15px; float: left" src="http://placehold.it/350x150">
-      <%= f.file_field :image %>
-      <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean risus tellus, aliquet ut odio vel, vehicula lacinia odio. Nullam suscipit augue quis est consectetur, et cursus sapien tempor. Aliquam egestas mi non arcu sagittis hendrerit. Mauris commodo, nunc quis congue ullamcorper, risus odio mattis lacus, ut aliquet libero elit ut dui. Mauris suscipit ipsum in ligula laoreet, sed gravida justo rutrum. Maecenas lobortis quam neque, et molestie dui consequat nec. Nulla sollicitudin, leo eu auctor lobortis, ligula velit dictum eros, a feugiat nulla lectus rutrum magna. </span>
-      
-      <hr stlye="float: right" width="100%"></hr>
-      <h4 class="subheader text-left"  contenteditable="true">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lobortis.</h4>
-      <img  height="300" width="400" style="padding: 15px; float: left" src="http://placehold.it/350x150">
-      <%= f.file_field :image %>
-      <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tincidunt tempor orci, non molestie justo egestas venenatis. Duis nec ultrices nulla. In et tortor sodales, mattis elit sed, faucibus sapien. Sed pellentesque laoreet dui vel volutpat. Nam ut porta dui. Aenean cursus pellentesque nisi, in elementum ipsum varius sit amet. Curabitur vestibulum justo et pretium dictum. Proin varius vel nisl ut ultrices. Ut sed metus aliquet, facilisis enim id, vulputate ipsum. Sed ac ullamcorper felis. Sed non quam vel orci sollicitudin feugiat. </span>
-    </div> 
-
-</span>
+      <%#SECTION 3%>
+  <div id="test">
+    <div class="row">
+    <div class="small-12 columns">  
+      <div id="section-3" class="text-center" contenteditable="true">
+        <h1>Insert header</h1>
+      </div>
+        
+      <div class="row">
+        <div class="small-12 columns" style="line-height: 24px;">
+          <div class="small-6 columns" style="padding: 20px;">
+            <h4 class="subheader text-left" style="padding: 15px" contenteditable="true">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare.</h4>
+              <img  height="300" width="400" style="padding:15px; float: left" src="http://placehold.it/350x150">
+              <%= f.file_field :image %>
+              <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean risus tellus, aliquet ut odio vel, vehicula lacinia odio. Nullam suscipit augue quis est consectetur, et cursus sapien tempor. Aliquam egestas mi non arcu sagittis hendrerit. Mauris commodo, nunc quis congue ullamcorper, risus odio mattis lacus, ut aliquet libero elit ut dui. Mauris suscipit ipsum in ligula laoreet, sed gravida justo rutrum. Maecenas lobortis quam neque, et molestie dui consequat nec. Nulla sollicitudin, leo eu auctor lobortis, ligula velit dictum eros, a feugiat nulla lectus rutrum magna. </span>
+            
+            <hr stlye="float: right" width="100%"></hr>
+            <h4 class="subheader text-left"  contenteditable="true">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lobortis.</h4>
+              <img  height="300" width="400" style="padding: 15px; float: left" src="http://placehold.it/350x150">
+              <%= f.file_field :image %>
+              <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tincidunt tempor orci, non molestie justo egestas venenatis. Duis nec ultrices nulla. In et tortor sodales, mattis elit sed, faucibus sapien. Sed pellentesque laoreet dui vel volutpat. Nam ut porta dui. Aenean cursus pellentesque nisi, in elementum ipsum varius sit amet. Curabitur vestibulum justo et pretium dictum. Proin varius vel nisl ut ultrices. Ut sed metus aliquet, facilisis enim id, vulputate ipsum. Sed ac ullamcorper felis. Sed non quam vel orci sollicitudin feugiat. </span>
+          </div> 
+          <div class="small-6 columns" style="padding: 20px;">
+            <h4 class="subheader text-left" style="padding: 15px" contenteditable="true">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare.</h4>
+              <img  height="300" width="400" style="padding:15px; float: left" src="http://placehold.it/350x150">
+              <%= f.file_field :image %>
+              <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean risus tellus, aliquet ut odio vel, vehicula lacinia odio. Nullam suscipit augue quis est consectetur, et cursus sapien tempor. Aliquam egestas mi non arcu sagittis hendrerit. Mauris commodo, nunc quis congue ullamcorper, risus odio mattis lacus, ut aliquet libero elit ut dui. Mauris suscipit ipsum in ligula laoreet, sed gravida justo rutrum. Maecenas lobortis quam neque, et molestie dui consequat nec. Nulla sollicitudin, leo eu auctor lobortis, ligula velit dictum eros, a feugiat nulla lectus rutrum magna. </span>
+            
+            <hr stlye="float: right" width="100%"></hr>
+            <h4 class="subheader text-left"  contenteditable="true">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lobortis.</h4>
+              <img  height="300" width="400" style="padding: 15px; float: left" src="http://placehold.it/350x150">
+              <%= f.file_field :image %>
+              <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tincidunt tempor orci, non molestie justo egestas venenatis. Duis nec ultrices nulla. In et tortor sodales, mattis elit sed, faucibus sapien. Sed pellentesque laoreet dui vel volutpat. Nam ut porta dui. Aenean cursus pellentesque nisi, in elementum ipsum varius sit amet. Curabitur vestibulum justo et pretium dictum. Proin varius vel nisl ut ultrices. Ut sed metus aliquet, facilisis enim id, vulputate ipsum. Sed ac ullamcorper felis. Sed non quam vel orci sollicitudin feugiat. </span>
+          </div> 
+        </div>
+      </div>
+      <hr width="100%"></hr>
+    </div>
     </div>
   </div>
-</div>
-<hr width="100%"></hr>
-<%#SECTION 4%>
-<div id="section-4" class="text-center" contenteditable="true">
-  <h1>Insert header</h1>
-</div>
-  <h3 class="subheader-center"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id.</h3> 
-<div class="row">
-  <div class="small-12 columns center" style="line-height: 24px; padding: 20px;">
-    <div class="small-4 columns">
-      <img  height="200" width="300"  src="http://placehold.it/350x150">
-      <%= f.file_field :image %>
+      <%#SECTION 4%>
+    <div class="row">
+    <div class="smal-12 columns">  
+      <div id="section-4" class="text-center" contenteditable="true">
+        <h1>Insert header</h1>
+      </div>
+        <h3 class="subheader-center"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id.</h3> 
+      <div class="row">
+        <div class="small-12 columns center" style="line-height: 24px; padding: 20px;">
+          <div class="small-4 columns">
+            <img  height="200" width="300"  src="http://placehold.it/350x150">
+            <%= f.file_field :image %>
+          </div>
+          <div class="small-4 columns">
+            <img  height="200" width="300"  src="http://placehold.it/350x150">
+            <%= f.file_field :image %>
+          </div>
+          <div class="small-4 columns">
+            <img  height="200" width="300"  src="http://placehold.it/350x150">
+            <%= f.file_field :image %>
+          </div>
+        </div>
+        <div class="large-12 columns center" style="line-height: 24px; padding: 20px;">
+          <p style="font-size:125%; line-height:34px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus semper in elit vitae ultrices. Aliquam at tincidunt dolor. Duis laoreet, metus ac vestibulum convallis, leo metus fermentum sapien, non lacinia ipsum nulla quis mi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam vel volutpat ligula. Suspendisse a tristique elit. Duis eleifend rutrum velit porta commodo. Sed facilisis tellus dui, varius tincidunt neque lobortis a. Integer suscipit sit amet neque eu hendrerit. Quisque libero dolor, consequat ut laoreet in, pharetra at lacus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+        </div>
+      </div>
     </div>
-    <div class="small-4 columns">
-      <img  height="200" width="300"  src="http://placehold.it/350x150">
-      <%= f.file_field :image %>
     </div>
-    <div class="small-4 columns">
-      <img  height="200" width="300"  src="http://placehold.it/350x150">
-      <%= f.file_field :image %>
-    </div>
-  </div>
-  <div class="large-12 columns center" style="line-height: 24px; padding: 20px;">
-    <p style="font-size:125%; line-height:34px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus semper in elit vitae ultrices. Aliquam at tincidunt dolor. Duis laoreet, metus ac vestibulum convallis, leo metus fermentum sapien, non lacinia ipsum nulla quis mi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam vel volutpat ligula. Suspendisse a tristique elit. Duis eleifend rutrum velit porta commodo. Sed facilisis tellus dui, varius tincidunt neque lobortis a. Integer suscipit sit amet neque eu hendrerit. Quisque libero dolor, consequat ut laoreet in, pharetra at lacus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-  </div>
 </div>
-<% end %>
+      <% end %>
