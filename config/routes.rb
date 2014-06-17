@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
 
-  resources :pages do
-    resources :sections
-  end
-
+resources :pages do
+  resources :sections
+end
 
  
   
@@ -16,6 +15,7 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   get 'welcome/index'
   root 'welcome#index'
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

@@ -1,9 +1,13 @@
 <br>
+<%= form_for(@page) do |f| %>
+<h1>New Page</h1> 
 
-
-
-<%= render 'form' %>
+<%= f.text_field :title %>
+ <div class="actions">
+      <%= f.submit %>
+    </div>
 
 <div class="padding-left">
 <%= link_to 'Back', pages_path %>
 </div>
+<% end %>

@@ -4,7 +4,7 @@ class SectionsController < ApplicationController
   # GET /sections
   # GET /sections.json
   def index
-    @page = Page.find(params[:id])
+    @pages = Page.find(params[:id])
     @page.sections = Section.all
   end
 
@@ -29,7 +29,8 @@ class SectionsController < ApplicationController
   # POST /sections
   # POST /sections.json
   def create
-    @page.sections = Section.new(section_params)
+    @page = Page.find(params[:page_id])
+    @section = @page.sections.new(section_params)
 
     respond_to do |format|
       if @section.save

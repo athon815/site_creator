@@ -41,3 +41,18 @@ $(function(){ $(document).foundation(); });
 
         checkPosition();
     }); //btw i dont really know what some of this means. go over it when meet with chris or ryan!!
+
+
+
+$("#section-body").on('keyup',function(){
+  $("#section-body").val($("#section-1").html());
+});
+$("#section-body").on('keyup',function(){
+  $("#section-body").val($("#section-2").html());
+});
+$("#section-body").on('keyup',function(){
+  $("#section-body").val($("#section-3").html());
+});
+$("#section-body").on('keyup',function(){
+  $("#section-body").val($("#section-4").html());
+});
