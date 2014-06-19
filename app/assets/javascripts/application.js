@@ -44,15 +44,11 @@ $(function(){ $(document).foundation(); });
 
 
 
-$("#section-body").on('keyup',function(){
-  $("#section-body").val($("#section-1").html());
-});
-$("#section-body").on('keyup',function(){
-  $("#section-body").val($("#section-2").html());
-});
-$("#section-body").on('keyup',function(){
-  $("#section-body").val($("#section-3").html());
-});
-$("#section-body").on('keyup',function(){
-  $("#section-body").val($("#section-4").html());
-});
+    $("#change").on('keyup',function(){
+      $("#section_body").val($("#section").html());
+    });
+
+    // step1: figure out keyup function to update hidden fields
+    // step2: figure out how to have default values section.body
+    // step3: edit page, replace html @page.sections.each do |section| 
+    // 

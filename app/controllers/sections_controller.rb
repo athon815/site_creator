@@ -1,5 +1,6 @@
 class SectionsController < ApplicationController
-  before_action :set_section, only: [:show, :edit, :update, :destroy]
+  before_action :set_page, only: [:show, :update]
+  before_action :set_section, only: [:show, :edit, :destroy, :update]
 
   # GET /sections
   # GET /sections.json
@@ -11,8 +12,7 @@ class SectionsController < ApplicationController
   # GET /sections/1
   # GET /sections/1.json
   def show
-    @page = Page.find(params[:id])
-    @page.sections = Section.find(params[:id])
+    # @section = Section.find(params[:id])
   end
 
   # GET /sections/new
@@ -31,7 +31,6 @@ class SectionsController < ApplicationController
   def create
     @page = Page.find(params[:page_id])
     @section = @page.sections.new(section_params)
-
     respond_to do |format|
       if @section.save
         format.html { redirect_to @page, notice: 'Section was successfully created.' }
@@ -46,9 +45,10 @@ class SectionsController < ApplicationController
   # PATCH/PUT /sections/1
   # PATCH/PUT /sections/1.json
   def update
+    @section = @page.sections.first
     respond_to do |format|
-      if @page.sections.update(section_params)
-        format.html { redirect_to @page.sections, notice: 'Section was successfully updated.' }
+      if @section.update(section_params)
+        format.html { redirect_to @page, notice: 'Section was successfully updated.' }
         format.json { render :show, status: :ok, location: @section }
       else
         format.html { render :edit }
@@ -70,11 +70,16 @@ class SectionsController < ApplicationController
   end
 
   private
+
+    def set_page
+      @page = Page.find(params[:page_id])
+    end
     # Use callbacks to share common setup or constraints between actions.
     def set_section
-      @section = @page.sections.new
+      @section = @page.sections
     end
 
+     
     # Never trust parameters from the scary internet, only allow the white list through.
     def section_params
       params.require(:section).permit(:title, :body, :page_id, :image)

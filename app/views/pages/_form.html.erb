@@ -10,21 +10,27 @@
       </ul>
     </div>
   <% end %>
+
+    <% @page.sections.each do |section| %>
+      <%= raw (section.body) %>
+    <% end %>
   
   <%= f.text_field :title %>
   <%= f.hidden_field :body %>
   <%#= render 'layout1' %>
+<div id="change">
+<div id="section">
   <div class "row">
     <a href="#" class="go-top" style="display: inline;">Back to top</a>
     <div class="nav center">
-      <a href="#section-1">Section1</a> |
-      <a href="#section-2">Section2</a> |
-      <a href="#section-3">Section3</a> |
-      <a href="#section-4">Section4</a>
+      <a href="#section-1" contenteditable="true">Section1</a> |
+      <a href="#section-2" contenteditable="true">Section2</a> |
+      <a href="#section-3" contenteditable="true">Section3</a> |
+      <a href="#section-4" contenteditable="true">Section4</a>
     </div>
     <%#SECTION 1%>
-<div id="section_body">
-  <div id="section-1">
+
+  <div id="new_section">
     <div class="row">
       <div class="smal-12 columns">
       <div class="text-center" contenteditable="true">
@@ -63,10 +69,8 @@
       </ul>
       </div>
     </div>
-  </div>
       <hr width="100%"></hr>
       <%#SECTION 2%>
-  <div id="section-2">
     <div class="row">
       <div class="small-12 columns">
       <div  class="text-center" contenteditable="true">
@@ -91,9 +95,7 @@
       <hr width="100%"></hr>
       </div>
     </div>
-  </div> 
       <%#SECTION 3%>
-  <div id="section-3">
     <div class="row">
     <div class="small-12 columns">  
       <div  class="text-center" contenteditable="true">
@@ -131,11 +133,9 @@
       <hr width="100%"></hr>
     </div>
     </div>
-  </div>
       <%#SECTION 4%>
-  <div id="section-4">
     <div class="row">
-    <div id="section-4" class="smal-12 columns">  
+    <div class="smal-12 columns">  
       <div  class="text-center" contenteditable="true">
         <h1>Insert header</h1>
       </div>

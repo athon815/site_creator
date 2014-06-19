@@ -17,12 +17,12 @@ class PagesController < ApplicationController
 
   def edit
     @page = Page.find(params[:id])
-    @section = @page.sections.new
+    @section = @page.sections.first
   end
 
   def create
     @page = Page.new(page_params)
-
+    @section = @page.sections.new
     respond_to do |format|
       if @page.save 
         format.html { redirect_to edit_page_path(@page) }
