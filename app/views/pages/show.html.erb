@@ -1,4 +1,13 @@
 <p id="notice"><%= notice %></p>
 
+<% @page.sections.each do |section| %>
+  <%= raw (section.contenteditable_false) %>
+  <%= image_tag section.image.url %>
+<% end %>
+
+
+
+
+
 <%= link_to 'Edit', edit_page_path(@page) %> |
 <%= link_to 'Back', pages_path %>

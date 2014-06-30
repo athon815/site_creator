@@ -12,7 +12,7 @@ class SectionsController < ApplicationController
   # GET /sections/1
   # GET /sections/1.json
   def show
-    # @section = Section.find(params[:id])
+    @section = Section.find(params[:id])
   end
 
   # GET /sections/new
@@ -23,7 +23,8 @@ class SectionsController < ApplicationController
 
   # GET /sections/1/edit
   def edit
-
+    @page = Page.find(params[:id]).update_attributes(:bgcolor => params[:bgcolor])
+    @section = @page.sections.first
   end
 
   # POST /sections
@@ -45,7 +46,10 @@ class SectionsController < ApplicationController
   # PATCH/PUT /sections/1
   # PATCH/PUT /sections/1.json
   def update
+    @page = Page.find(params[:id])
     @section = @page.sections.first
+    @page.update_attributes(:bgcolor => params[:bgcolor])
+
     respond_to do |format|
       if @section.update(section_params)
         format.html { redirect_to @page, notice: 'Section was successfully updated.' }
@@ -60,9 +64,9 @@ class SectionsController < ApplicationController
   # DELETE /sections/1
   # DELETE /sections/1.json
   def destroy
-    @page.sections.destroy
-    @page.sections.image = nil
-    @page.sections.image
+    #@page.sections.destroy
+    #@page.sections.image = nil
+    #@page.sections.image
     respond_to do |format|
       format.html { redirect_to page_sections_url, notice: 'Section was successfully destroyed.' }
       format.json { head :no_content }

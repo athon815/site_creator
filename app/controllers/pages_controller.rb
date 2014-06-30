@@ -8,7 +8,7 @@ class PagesController < ApplicationController
 
   def show
     @page = Page.find(params[:id])
-    @section = @page.sections
+    @section = @page.sections.first
   end
 
   def new
@@ -66,10 +66,10 @@ class PagesController < ApplicationController
     end
 
     def page_params
-      params.require(:page).permit(:title) if params[:page]
+      params.require(:page).permit(:title, :image) if params[:page]
     end
 
     def sections_params
-      params.require(:section).permit(:title, :body, :page_id)
+      params.require(:section).permit(:title, :body, :page_id, :image)
     end
 end

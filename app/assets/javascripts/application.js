@@ -16,6 +16,7 @@
 //= require turbolinks
 //= require_tree .
 
+
 $(function(){ $(document).foundation(); });
 
     var key = "draft",
@@ -43,11 +44,26 @@ $(function(){ $(document).foundation(); });
     }); //btw i dont really know what some of this means. go over it when meet with chris or ryan!!
 
 
+$(function(){
+  $("#change").click(function(){
+    $("#section_body").attr('contenteditable', 'false');
+  });
+});
 
-    $("#change").on('keyup',function(){
-      $("#section_body").val($("#section").html());
-    });
+$("#change").on('keyup',function(){
+  $("#section_body").val($("#section").html());
+});
 
+$("#find-me").change(function(){
+  $("#page_bgcolor").val($("#find-me").attr("style"));
+});
+
+
+
+
+function changeBackground(colorValue){
+document.body.style.backgroundColor = colorValue;
+}
     // step1: figure out keyup function to update hidden fields
     // step2: figure out how to have default values section.body
     // step3: edit page, replace html @page.sections.each do |section| 

@@ -18,11 +18,13 @@
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
     <%= csrf_meta_tags %>
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+
   </head>
   <% if user_signed_in? %>
     <h4 class="subheader"><small><%= link_to('Logout', destroy_user_session_path, :method=>'delete') %></small></h4>  
   <%end%>
-  <body>
+  <body id="find-me" style="background-color:<%= @page.bgcolor if @page %>">
 
     <%= yield %>
     <%= javascript_include_tag "application" %>
