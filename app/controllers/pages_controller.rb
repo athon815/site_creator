@@ -18,6 +18,7 @@ class PagesController < ApplicationController
   def edit
     @page = Page.find(params[:id])
     @section = @page.sections.first
+    @image = Image.new
   end
 
   def create
@@ -57,19 +58,27 @@ class PagesController < ApplicationController
 
   private
 
-    def set_page
-      @page = Page.find(params[:id])
-    end
+  def set_page
+    @page = Page.find(params[:id])
+  end
 
-    def set_section
-      @section = @page.sections.new
-    end
+  def set_section
+    @section = @page.sections.new
+  end
+  
+  def set_image
+    @image = Image.find(params[:id])
+  end
 
-    def page_params
-      params.require(:page).permit(:title, :image) if params[:page]
-    end
+  def page_params
+    params.require(:page).permit(:title) if params[:page]
+  end
 
-    def sections_params
-      params.require(:section).permit(:title, :body, :page_id, :image)
-    end
+  def sections_params
+    params.require(:section).permit(:title, :body, :page_id)
+  end
+
+  def image_params
+    params.require(:image).permit(:file, :section_id)
+  end
 end

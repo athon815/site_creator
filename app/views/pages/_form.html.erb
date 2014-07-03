@@ -11,14 +11,21 @@
     </div>
   <% end %>
 <div id='bg'> 
-  <label for='bgcolor'>Select the background color for this page:</label> <input type='color' value='#ff0000' id='bgcolor' name='bgcolor' oninput='changeBackground(bgcolor.value)'>
+  <label for='bgcolor'>Select the background color for this page:</label> <input type='color' value='#ffffff' id='bgcolor' name='bgcolor' oninput='changeBackground(bgcolor.value)'>
 </div>
   <% @page.sections.each do |section| %>
     <%= raw (section.body) %>
+    <%#= section.images.new, url: section_images_path, :html => { :multipart => true }  do |form| %>
+      <%#= form.file_field :file  %>
+    <%#end %>
+    <%= form_for ([section, @image]), :url => section_images_path, :html => { multipart: true } do |form| %>
+      <%= form.file_field :file %>
+    <% end %>
   <% end %>
+
   <%= f.hidden_field :body %>
   <%#= render 'layout1' %>
-  <%= f.file_field :image %>
+
   <div class="padding-left">
     <div class="actions">
       <%= f.submit "Save" %>

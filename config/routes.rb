@@ -1,10 +1,14 @@
 Rails.application.routes.draw do
+  root 'welcome#index'
+  get 'welcome/index'
 
-resources :pages do
-  resources :sections
-end
+  resources :pages do
+    resources :sections
+  end
 
- 
+  resource :section do
+    resources :images
+  end
   
   devise_for :users, path_names: { sign_in: 'login', sign_out: 'logout', sign_up: 'signup' }
   resources :users
@@ -13,8 +17,6 @@ end
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  get 'welcome/index'
-  root 'welcome#index'
 
 
   # Example of regular route:

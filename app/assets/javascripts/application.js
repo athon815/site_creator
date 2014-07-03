@@ -49,7 +49,6 @@ $(function(){
     $("#section_body").attr('contenteditable', 'false');
   });
 });
-
 $("#change").on('keyup',function(){
   $("#section_body").val($("#section").html());
 });

@@ -5,16 +5,6 @@ GIT
   specs:
     yaml_db (0.2.3)
 
-GIT
-  remote: git://github.com/thoughtbot/paperclip.git
-  revision: 4f24ed2cffa5e9d1f8b1332d9678dae479d719cf
-  specs:
-    paperclip (4.1.1)
-      activemodel (>= 3.0.0)
-      activesupport (>= 3.0.0)
-      cocaine (~> 0.5.3)
-      mime-types
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -65,7 +55,7 @@ GEM
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
     erubis (2.7.0)
-    execjs (2.2.0)
+    execjs (2.2.1)
     foundation-rails (5.3.0.1)
       railties (>= 3.1.0)
       sass (>= 3.2.0)
@@ -86,6 +76,11 @@ GEM
     multi_json (1.10.1)
     mysql (2.9.1)
     orm_adapter (0.5.0)
+    paperclip (4.1.1)
+      activemodel (>= 3.0.0)
+      activesupport (>= 3.0.0)
+      cocaine (~> 0.5.3)
+      mime-types
     polyglot (0.3.5)
     rack (1.5.2)
     rack-test (0.6.2)
@@ -153,7 +148,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   mysql
-  paperclip!
+  paperclip (~> 4.1)
   rails (= 4.1.1)
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)

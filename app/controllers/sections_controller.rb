@@ -25,6 +25,7 @@ class SectionsController < ApplicationController
   def edit
     @page = Page.find(params[:id]).update_attributes(:bgcolor => params[:bgcolor])
     @section = @page.sections.first
+    @image = @section.images.new
   end
 
   # POST /sections
@@ -49,9 +50,11 @@ class SectionsController < ApplicationController
     @page = Page.find(params[:id])
     @section = @page.sections.first
     @page.update_attributes(:bgcolor => params[:bgcolor])
+    @image = @section.images.new
 
     respond_to do |format|
       if @section.update(section_params)
+        @image.save
         format.html { redirect_to @page, notice: 'Section was successfully updated.' }
         format.json { render :show, status: :ok, location: @section }
       else
@@ -75,17 +78,23 @@ class SectionsController < ApplicationController
 
   private
 
-    def set_page
-      @page = Page.find(params[:page_id])
-    end
-    # Use callbacks to share common setup or constraints between actions.
-    def set_section
-      @section = @page.sections
-    end
+  def set_page
+    @page = Page.find(params[:page_id])
+  end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_section
+    @section = @page.sections
+  end
 
-     
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def section_params
-      params.require(:section).permit(:title, :body, :page_id, :image)
-    end
+  def set_image
+    @image = Image.find(params[:id])
+  end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def section_params
+    params.require(:section).permit(:title, :body, :page_id)
+  end
+
+  def image_params
+    params.require(:image).permit(:file, :section_id)
+  end
 end

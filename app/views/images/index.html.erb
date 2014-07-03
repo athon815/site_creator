@@ -1,0 +1,5 @@
+<h1>Index</h1>
+
+<% Image.all.each do |image| %>
+	<%= image_tag image.file.url %> 
+<% end %>

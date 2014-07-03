@@ -2,8 +2,10 @@
 
 <% @page.sections.each do |section| %>
   <%= raw (section.contenteditable_false) %>
-  <%= image_tag section.image.url %>
+  	<% @section.images.each do |image| %>
+	<%= image_tag image.file.url %> 
 <% end %>
+  <% end %>
 
 
 
