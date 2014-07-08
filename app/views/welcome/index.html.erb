@@ -2,6 +2,20 @@
   <div class="small-2 small-centered columns"><h2>Welcome<h2></div>
 </div>
 <div class="row">
-  <div class="large-4 columns"><%= @pages %></div>
+  <div class="large-4 columns">
+  	<table>
+  	 <thead>
+    	<tr>
+    		<th> Title <th>
+   	  </tr>
+  	</thead>
+  	<% @pages.each do |page| %>
+      	<tr>
+      	<td><%= page.title %></td>
+        <td><%= link_to 'Show', page %></td>
+        </tr>
+		<% end %>
+    </table>
+        </div>
   <div class="large-4 columns"><button class="success radius large"><%= link_to 'Create A Page', new_page_path(@page, @section) %></button></div>
 </div>
