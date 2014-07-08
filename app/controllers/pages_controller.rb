@@ -9,6 +9,7 @@ class PagesController < ApplicationController
   def show
     @page = Page.find(params[:id])
     @section = @page.sections.first
+    @image = @section.images
   end
 
   def new
@@ -36,6 +37,11 @@ class PagesController < ApplicationController
   end
 
   def update
+    @page = Page.find(params[:id])
+    @section = @page.sections.first
+    @page.update_attributes(:bgcolor => params[:bgcolor])
+    @image = @section.images.save
+
     respond_to do |format|
       if @page.update(page_params)
         format.html { redirect_to @page, notice: 'Page was successfully updated.' }
@@ -71,11 +77,11 @@ class PagesController < ApplicationController
   end
 
   def page_params
-    params.require(:page).permit(:title) if params[:page]
+    params.require(:page).permit(:title, :image) if params[:page]
   end
 
   def sections_params
-    params.require(:section).permit(:title, :body, :page_id)
+    params.require(:section).permit(:title, :body, :page_id, :image)
   end
 
   def image_params
